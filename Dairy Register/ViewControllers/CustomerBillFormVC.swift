@@ -28,6 +28,7 @@ class CustomerBillFormVC: UIViewController {
     var customerNamesList = [String]()
     var selectBuffaloRate = String()
     var selectCowRate = String()
+    var selectedMonth : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +66,8 @@ class CustomerBillFormVC: UIViewController {
     @IBAction func btnGenerateBillAct(_ sender : UIButton) {
         
         if (validateForm()) {
-            let milkRecord : [String : Any] = ["SNo.": "\(/txtSerialNo?.text?.trim())", "CustomerName": "\(/getCustomerName())", "TotalCowMilk": getTotalCowMilk() , "NormalMilkRate": "\(selectCowRate)", "TotalBuffaloMilk": getTotalBuffaloMilk(), "Advance": getAdvanceValue(), "PackingMilkRate": "\(selectBuffaloRate)", "Month": "\(Utility.shared.getCurrentMonth())", "isPackingMilk": "\(isPackingMilk())", "Balance": getBalanceValue()]
+            
+            let milkRecord : [String : Any] = ["SNo.": "\(/txtSerialNo?.text?.trim())", "CustomerName": "\(/getCustomerName())", "TotalCowMilk": getTotalCowMilk() , "NormalMilkRate": "\(selectCowRate)", "TotalBuffaloMilk": getTotalBuffaloMilk(), "Advance": getAdvanceValue(), "PackingMilkRate": "\(selectBuffaloRate)", "Month": "\(selectedMonth ?? Utility.shared.getCurrentMonth())", "isPackingMilk": "\(isPackingMilk())", "Balance": getBalanceValue()]
             print(milkRecord)
             generateBill(milkRecord)
         }

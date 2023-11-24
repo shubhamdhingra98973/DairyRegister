@@ -7,12 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct RangeAttribute {
     var key : NSAttributedString.Key
     var value : Any
 }
+
+
 
 
 class Utility : NSObject {
@@ -41,6 +43,10 @@ class Utility : NSObject {
                return numberOfLines
     }
     
+    func isiPad() -> Bool {
+        return UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
     func getFont(fontInfo : FontFamilyAndSize) -> UIFont {
        
         switch fontInfo {
@@ -52,6 +58,12 @@ class Utility : NSObject {
             return UIFont.boldSystemFont(ofSize: 14)
         case .BoldSize16:
             return UIFont.boldSystemFont(ofSize: 16)
+        case .BoldSize18:
+            return UIFont.boldSystemFont(ofSize: 18)
+        case .BoldSize20:
+            return UIFont.boldSystemFont(ofSize: 20)
+        case .BoldSize24:
+            return UIFont.boldSystemFont(ofSize: 24)
         case .RegularSize10:
             return UIFont.systemFont(ofSize: 10)
         case .RegularSize12:
@@ -60,7 +72,11 @@ class Utility : NSObject {
             return UIFont.systemFont(ofSize: 14)
         case .RegularSize16:
             return UIFont.systemFont(ofSize: 16)
-        default:
+        case .RegularSize18:
+            return UIFont.systemFont(ofSize: 18)
+        case .RegularSize20:
+            return UIFont.systemFont(ofSize: 20)
+        case .RegularSize24:
             return UIFont.systemFont(ofSize: 24)
         }
     }
@@ -111,10 +127,11 @@ class Utility : NSObject {
     }
     
     func getPaperHeight(data : [String : Any]) -> CGFloat {
-        var paperHeight = PaperDimensions.PaperHeight.value
+        var paperHeight =  Utility.shared.isiPad() ? IPadPaperDimensions.PaperHeight.value : PaperDimensions.PaperHeight.value
+        let paperWidth =  Utility.shared.isiPad() ? IPadPaperDimensions.PaperWidth.value : PaperDimensions.PaperWidth.value
         let customerNameTextRect : CGFloat = 58
         if let customerName = data["CustomerName"] as? String {
-            let lineTakenByName = Utility.shared.noOfLinesTakenByContent(text: "\(customerName)", font: .BoldSize12, contentArea: CGSize(width: PaperDimensions.PaperWidth.value - CGFloat(customerNameTextRect), height: paperHeight))
+            let lineTakenByName = Utility.shared.noOfLinesTakenByContent(text: "\(customerName)", font: .BoldSize12, contentArea: CGSize(width: paperWidth - CGFloat(customerNameTextRect), height: paperHeight))
             print("Line taken by Name :",lineTakenByName)
             if (lineTakenByName > 1) {
                 paperHeight = paperHeight + 20

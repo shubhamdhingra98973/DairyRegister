@@ -14,10 +14,16 @@ enum FontFamilyAndSize {
     case BoldSize12
     case BoldSize14
     case BoldSize16
+    case BoldSize18
+    case BoldSize20
+    case BoldSize24
     case RegularSize10
     case RegularSize12
     case RegularSize14
     case RegularSize16
+    case RegularSize18
+    case RegularSize20
+    case RegularSize24
 }
 
 let kYes = "Yes"
@@ -68,16 +74,16 @@ enum BillConstants: String {
     }
 }
 
-//enum PaperDimensions : CGFloat {
-//    case PaperWidth = 285
-//    case PaperHeight = 400
-//    case BorderWidth = 2
-//    case marginFromBothSides = 8
-//
-//    var value : CGFloat {
-//        return self.rawValue
-//    }
-//}
+enum IPadPaperDimensions : CGFloat {
+    case PaperWidth = 285
+    case PaperHeight = 420
+    case BorderWidth = 2
+    case marginFromBothSides = 8
+
+    var value : CGFloat {
+        return self.rawValue
+    }
+}
 
 enum PaperDimensions : CGFloat {
     case PaperWidth = 188

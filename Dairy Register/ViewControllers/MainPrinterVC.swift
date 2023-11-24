@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreXLSX
-
+import UIKit
 
 class MainPrinterVC : UIViewController {
     var test:WifiManager!
@@ -23,6 +23,8 @@ class MainPrinterVC : UIViewController {
     @IBOutlet weak var btnLoadExcelData : UIButton!
     @IBOutlet weak var btnPrintBlankReceipts : UIButton!
     @IBOutlet weak var btnShowCustomerList : UIButton!
+    @IBOutlet weak var textEnterMonthNo : UITextField!
+
     
     var customerDataArray = [[String : Any]]() {
         didSet {
@@ -48,6 +50,7 @@ class MainPrinterVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textEnterMonthNo?.text = "\(Utility.shared.getCurrentMonth())"
         updateActivateUI()
     }
     
@@ -74,6 +77,7 @@ class MainPrinterVC : UIViewController {
             return
         }
         viewController.customerNamesList = UserDefaultManager.getCustomerNamesList()
+        viewController.selectedMonth =  Int(/textEnterMonthNo?.text)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
