@@ -24,11 +24,14 @@ class CustomerBillFormVC: UIViewController {
     @IBOutlet weak var btnCowRate66 : UIButton!
     @IBOutlet weak var btnCowRate62: UIButton!
     @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var btnPrevious : UIButton!
+    @IBOutlet weak var btnNext : UIButton!
     
     var customerNamesList = [String]()
     var selectBuffaloRate = String()
     var selectCowRate = String()
     var selectedMonth : Int?
+    var selectedCustomerIndex : Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,9 @@ class CustomerBillFormVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(CustomerBillFormVC.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(CustomerBillFormVC.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+        if (customerNamesList.count > 0) {
+            self.txtSelectCustomer?.text = self.customerNamesList[selectedCustomerIndex]
+        }
     }
     
     func configureDropDown() {
@@ -47,7 +52,6 @@ class CustomerBillFormVC: UIViewController {
         DropDown.appearance().selectedTextColor = UIColor.white
        
         DropDown.appearance().textFont = UIFont.systemFont(ofSize: 18, weight: .bold)
-//        DropDown.appearance().backgroundColor = UIColor.lightGray
         DropDown.appearance().selectionBackgroundColor = UIColor.systemGreen
     }
     
@@ -135,6 +139,7 @@ class CustomerBillFormVC: UIViewController {
         }
         return true
     }
+    
     @IBAction func btnResetAct(_ sender : UIButton) {
         rateSelectForBuffaloMilk(tag: 0)
         rateSelectForCowMilk(tag: 1)
@@ -155,6 +160,32 @@ class CustomerBillFormVC: UIViewController {
     
     @IBAction func btnBuffaloRateSelectAct(_ sender : UIButton) {
         rateSelectForBuffaloMilk(tag : sender.tag)
+    }
+    
+    @IBAction func btnPreviousTabAct(_ sender : UIButton) {
+        if (customerNamesList.count == 0) {
+            Utility.shared.makeToast("Please load your customer list")
+        }
+        if (selectedCustomerIndex > 0) {
+            self.selectedCustomerIndex = self.selectedCustomerIndex - 1
+            self.txtSelectCustomer?.text = self.customerNamesList[self.selectedCustomerIndex]
+        } else {
+            self.selectedCustomerIndex = self.customerNamesList.count - 1
+            self.txtSelectCustomer?.text = self.customerNamesList[self.selectedCustomerIndex]
+        }
+    }
+    
+    @IBAction func btnNextTabAct(_ sender : UIButton) {
+        if (customerNamesList.count == 0) {
+            Utility.shared.makeToast("Please load your customer list")
+        }
+        if (self.selectedCustomerIndex < self.customerNamesList.count - 1) {
+            self.selectedCustomerIndex = self.selectedCustomerIndex + 1
+            self.txtSelectCustomer?.text = self.customerNamesList[self.selectedCustomerIndex]
+        } else {
+            self.selectedCustomerIndex = 0
+            self.txtSelectCustomer?.text = self.customerNamesList[self.selectedCustomerIndex]
+        }
     }
     
     @IBAction func btnCowRateSelectAct(_ sender : UIButton) {
@@ -195,6 +226,7 @@ extension CustomerBillFormVC {
         dropDown.bottomOffset = CGPoint(x: 10, y:150)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
+            selectedCustomerIndex = index
             txtSelectCustomer.text = item
             dropDown.hide()
         }

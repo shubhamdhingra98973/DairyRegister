@@ -10,6 +10,7 @@ import CoreXLSX
 import UIKit
 
 class MainPrinterVC : UIViewController {
+    
     var test:WifiManager!
     var test2:WifiManager!
     var isConnectedGlobal:Bool=false
@@ -52,6 +53,7 @@ class MainPrinterVC : UIViewController {
         super.viewDidLoad()
         textEnterMonthNo?.text = "\(Utility.shared.getCurrentMonth())"
         updateActivateUI()
+        addToolBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,6 +74,40 @@ class MainPrinterVC : UIViewController {
     }
     
     @IBAction func btnGenerateCustomerBill(_ sender: Any) {
+        if ( Int(/textEnterMonthNo?.text) == Utility.shared.getCurrentMonth()) {
+            openFormVc()
+        } else {
+            showAlert()
+        }
+    }
+    
+    func showAlert() {
+            // Create an instance of UIAlertController with title, message, and preferred style
+        let monthText = "\(Utility.shared.getMonthText(monthNumber: Int(/textEnterMonthNo?.text) ?? 0))"
+        let alertController = UIAlertController(title: "Attention", message: "Select Month : \n \(monthText) ", preferredStyle: .alert)
+            
+            // Create an action for the alert
+            let yesAction = UIAlertAction(title: "Yes", style: .default) { (action) in
+                // Handle OK button tap
+                self.openFormVc()
+            }
+            
+            // Create an action for the alert
+            let noAction = UIAlertAction(title: "No", style: .destructive) { (action) in
+            // Handle OK button tap
+                alertController.dismiss(animated: true)
+            }
+        
+            // Add the action to the alert controller
+            alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+            
+            // Present the alert controller
+            self.present(alertController, animated: true, completion: nil)
+        }
+    
+    
+    func openFormVc() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyBoard.instantiateViewController(withIdentifier: "CustomerBillFormVC") as? CustomerBillFormVC else {
             return
@@ -80,7 +116,6 @@ class MainPrinterVC : UIViewController {
         viewController.selectedMonth =  Int(/textEnterMonthNo?.text)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
-    
     func ConnectPrinter(){
         let queue = DispatchQueue(label: "com.receipt.printer1", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
         queue.async {
@@ -96,18 +131,6 @@ class MainPrinterVC : UIViewController {
                 print("connect printer1 failed\n");
             }
         }
-        //        let queue2 = DispatchQueue(label: "com.receipt.printer2", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
-        //        queue2.async {
-        //            var isConnected:Bool;
-        //            self.test2=WifiManager.share(0,threadID: "com.receipt.printer2");
-        //            isConnected=self.test2.connectWifiPrinter("192.168.3.88", port: 9100);
-        //            if(isConnected){
-        //                print("connect printer2 succeessfully\n");
-        //                self.test2.startMonitor();
-        //            }else{
-        //                print("connect printer2 failed\n");
-        //            }
-        //        }
     }
     //To monitor the status of the machine, you need to enable the no-lost order function in advance
     @IBAction func btnPrintAllReceiptsAct(_ sender: Any) {
@@ -285,3 +308,30 @@ extension MainPrinterVC {
         
     }
 }
+
+extension MainPrinterVC {
+    
+    func addToolBar() {
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        //toolBar.tintColor = UIColor(red: 76 / 255, green: 217 / 255, blue: 100 / 255, alpha: 1)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(donePressed))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        self.textEnterMonthNo?.inputAccessoryView = toolBar
+    }
+    
+    @objc func donePressed() {
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelPressed() {
+        self.view.endEditing(true)
+    }
+}
+

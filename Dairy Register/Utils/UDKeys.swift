@@ -58,7 +58,10 @@ class UserDefaultManager {
     
     class func getCustomerNamesList() -> [String] {
         if let customerNamesDTO = UDKeys.CustomerNamesList.fetch() as? [String] {
-            return customerNamesDTO
+            let filteredList = customerNamesDTO.filter { (value) -> Bool in
+                return value.trim().count > 0
+            }
+            return filteredList
         }
         return []
     }
