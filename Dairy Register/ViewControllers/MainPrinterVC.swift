@@ -144,6 +144,16 @@ class MainPrinterVC : UIViewController {
         }
     }
     
+    //To monitor the status of the machine, you need to enable the no-lost order function in advance
+    @IBAction func btnPrintDairySlips(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "PrintDairySlipsVC") as? PrintDairySlipsVC else {
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
     @IBAction func btnShowCustomerRecord(_ sender: Any) {
         openCustomerList()
     }
@@ -187,7 +197,7 @@ class MainPrinterVC : UIViewController {
                     print(self.test.getPrinterStatus());
                 }
                 //Only machines with large boards can frequently disconnect and connect ports
-                self.test.disConnectPrinter();
+//                self.test.disConnectPrinter();
                 self.isConnectedGlobal=false;
             }
         }else{

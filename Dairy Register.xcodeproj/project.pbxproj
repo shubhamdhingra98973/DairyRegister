@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		695440722BE62ED0003A7EF9 /* PrintDairySlipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695440712BE62ED0003A7EF9 /* PrintDairySlipsVC.swift */; };
+		695440752BE634B6003A7EF9 /* CreateDairySlips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695440742BE634B6003A7EF9 /* CreateDairySlips.swift */; };
+		695440772BE63F82003A7EF9 /* DairySlipConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695440762BE63F82003A7EF9 /* DairySlipConstants.swift */; };
+		695440792BE63F8F003A7EF9 /* CustomersListAreaWise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695440782BE63F8F003A7EF9 /* CustomersListAreaWise.swift */; };
 		695958F52A9FB24C00D0E87B /* CustomerBillFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F42A9FB24C00D0E87B /* CustomerBillFormVC.swift */; };
 		695958F82A9FCFFC00D0E87B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F72A9FCFFC00D0E87B /* Toast.swift */; };
 		695958FA2AA05D5400D0E87B /* UDKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F92AA05D5400D0E87B /* UDKeys.swift */; };
+		698533C12BE100580011115C /* Customer_Milk_Record_sheet.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */; };
 		69AE05252A96731E00576369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE05242A96731E00576369 /* AppDelegate.swift */; };
 		69AE05272A96731E00576369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE05262A96731E00576369 /* SceneDelegate.swift */; };
 		69AE052C2A96731E00576369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE052A2A96731E00576369 /* Main.storyboard */; };
@@ -46,7 +51,6 @@
 		69C04A332A9B5A08007ABA66 /* BillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A322A9B5A08007ABA66 /* BillManager.swift */; };
 		69C04A352A9B5BAC007ABA66 /* BillCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A342A9B5BAC007ABA66 /* BillCreation.swift */; };
 		69C04A372A9B6469007ABA66 /* BillViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A362A9B6469007ABA66 /* BillViewerVC.swift */; };
-		69F431CD2AC6D3C000CED686 /* Customer_Milk_Record_sheet.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 69F431CC2AC6D3C000CED686 /* Customer_Milk_Record_sheet.xlsx */; };
 		D930F6C7125114605381BD2C /* Pods_Dairy_Register.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B9F5DF214B7415B19E63C8 /* Pods_Dairy_Register.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +58,14 @@
 		06B9F5DF214B7415B19E63C8 /* Pods_Dairy_Register.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dairy_Register.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		143ABE510F64C4A8A25EF329 /* Pods-Dairy Register.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dairy Register.debug.xcconfig"; path = "Target Support Files/Pods-Dairy Register/Pods-Dairy Register.debug.xcconfig"; sourceTree = "<group>"; };
 		53CD2FC7C7A140FCA162BC9A /* Pods-Dairy Register.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dairy Register.release.xcconfig"; path = "Target Support Files/Pods-Dairy Register/Pods-Dairy Register.release.xcconfig"; sourceTree = "<group>"; };
+		695440712BE62ED0003A7EF9 /* PrintDairySlipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDairySlipsVC.swift; sourceTree = "<group>"; };
+		695440742BE634B6003A7EF9 /* CreateDairySlips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDairySlips.swift; sourceTree = "<group>"; };
+		695440762BE63F82003A7EF9 /* DairySlipConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairySlipConstants.swift; sourceTree = "<group>"; };
+		695440782BE63F8F003A7EF9 /* CustomersListAreaWise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersListAreaWise.swift; sourceTree = "<group>"; };
 		695958F42A9FB24C00D0E87B /* CustomerBillFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerBillFormVC.swift; sourceTree = "<group>"; };
 		695958F72A9FCFFC00D0E87B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		695958F92AA05D5400D0E87B /* UDKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDKeys.swift; sourceTree = "<group>"; };
+		698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Customer_Milk_Record_sheet.xlsx; sourceTree = "<group>"; };
 		69AE05212A96731D00576369 /* Dairy Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dairy Register.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AE05242A96731E00576369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AE05262A96731E00576369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +121,6 @@
 		69C04A322A9B5A08007ABA66 /* BillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillManager.swift; sourceTree = "<group>"; };
 		69C04A342A9B5BAC007ABA66 /* BillCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCreation.swift; sourceTree = "<group>"; };
 		69C04A362A9B6469007ABA66 /* BillViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewerVC.swift; sourceTree = "<group>"; };
-		69F431CC2AC6D3C000CED686 /* Customer_Milk_Record_sheet.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Customer_Milk_Record_sheet.xlsx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		695440732BE63495003A7EF9 /* DairySlipFiles */ = {
+			isa = PBXGroup;
+			children = (
+				695440742BE634B6003A7EF9 /* CreateDairySlips.swift */,
+				695440762BE63F82003A7EF9 /* DairySlipConstants.swift */,
+				695440782BE63F8F003A7EF9 /* CustomersListAreaWise.swift */,
+			);
+			path = DairySlipFiles;
+			sourceTree = "<group>";
+		};
 		695958F62A9FCFFC00D0E87B /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,12 +177,13 @@
 		69AE05232A96731D00576369 /* Dairy Register */ = {
 			isa = PBXGroup;
 			children = (
+				695440732BE63495003A7EF9 /* DairySlipFiles */,
+				698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */,
 				695958F62A9FCFFC00D0E87B /* Toast */,
 				69C04A2C2A9B4496007ABA66 /* Utils */,
 				69C04A292A9B3391007ABA66 /* CustomDataSource */,
 				69C04A242A9B32B2007ABA66 /* Cells */,
 				69C04A1C2A9B09D9007ABA66 /* ViewControllers */,
-				69F431CC2AC6D3C000CED686 /* Customer_Milk_Record_sheet.xlsx */,
 				69AE056F2A96762300576369 /* AppConstants.swift */,
 				69AE056D2A9675EB00576369 /* Utility.swift */,
 				69AE053C2A96740000576369 /* PrinterFiles */,
@@ -254,6 +273,7 @@
 				69C04A1F2A9B09F5007ABA66 /* CustomerListVC.swift */,
 				69C04A362A9B6469007ABA66 /* BillViewerVC.swift */,
 				695958F42A9FB24C00D0E87B /* CustomerBillFormVC.swift */,
+				695440712BE62ED0003A7EF9 /* PrintDairySlipsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -370,8 +390,8 @@
 			files = (
 				69AE05312A96731E00576369 /* LaunchScreen.storyboard in Resources */,
 				69AE052E2A96731E00576369 /* Assets.xcassets in Resources */,
+				698533C12BE100580011115C /* Customer_Milk_Record_sheet.xlsx in Resources */,
 				69AE05622A96749F00576369 /* Documentation.html in Resources */,
-				69F431CD2AC6D3C000CED686 /* Customer_Milk_Record_sheet.xlsx in Resources */,
 				69AE052C2A96731E00576369 /* Main.storyboard in Resources */,
 				69C04A282A9B32CE007ABA66 /* CustomerCell.xib in Resources */,
 			);
@@ -431,6 +451,7 @@
 				69AE05682A96749F00576369 /* ImageTranster.m in Sources */,
 				69C04A1E2A9B09D9007ABA66 /* MainPrinterVC.swift in Sources */,
 				69AE057C2A96784100576369 /* AsyncSocket.m in Sources */,
+				695440752BE634B6003A7EF9 /* CreateDairySlips.swift in Sources */,
 				69AE05672A96749F00576369 /* PosCommand.m in Sources */,
 				69C04A332A9B5A08007ABA66 /* BillManager.swift in Sources */,
 				695958F82A9FCFFC00D0E87B /* Toast.swift in Sources */,
@@ -448,15 +469,18 @@
 				69AE05452A96744100576369 /* TSCCommandVc.m in Sources */,
 				69C04A2B2A9B4478007ABA66 /* TableViewDataSource.swift in Sources */,
 				69C04A352A9B5BAC007ABA66 /* BillCreation.swift in Sources */,
+				695440772BE63F82003A7EF9 /* DairySlipConstants.swift in Sources */,
 				69AE05612A96749F00576369 /* TscCommand.m in Sources */,
 				69C04A312A9B4CA9007ABA66 /* ViewExtensions.swift in Sources */,
 				69AE05642A96749F00576369 /* GCDAsyncSocket.m in Sources */,
 				69AE05652A96749F00576369 /* WifiManager.m in Sources */,
 				69C04A202A9B09F5007ABA66 /* CustomerListVC.swift in Sources */,
 				69C04A272A9B32CE007ABA66 /* CustomerCell.swift in Sources */,
+				695440722BE62ED0003A7EF9 /* PrintDairySlipsVC.swift in Sources */,
 				69AE055F2A96749F00576369 /* POSWIFIManager.m in Sources */,
 				695958F52A9FB24C00D0E87B /* CustomerBillFormVC.swift in Sources */,
 				69AE056E2A9675EB00576369 /* Utility.swift in Sources */,
+				695440792BE63F8F003A7EF9 /* CustomersListAreaWise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

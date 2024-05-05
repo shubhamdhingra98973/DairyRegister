@@ -17,7 +17,6 @@ class BillManager : NSObject {
     
     
     func calculateTotalBuffaloMilkAmount(data : [String : Any]) -> Double {
-        
         var totalAmount = 0.0
         //Amount calculation of buffalo milk
         if let isPackingMilk = data["isPackingMilk"] as? String, let TotalBuffaloMilk = data["TotalBuffaloMilk"] {
@@ -28,14 +27,14 @@ class BillManager : NSObject {
                 if let rate = data["PackingMilkRate"]{
                     totalAmount = convertValueToDouble(rate) * convertValueToDouble(TotalBuffaloMilk)
                 } else {
-                    totalAmount = convertValueToDouble(TotalBuffaloMilk) * 66
+                    totalAmount = convertValueToDouble(TotalBuffaloMilk) * MilkRates.BuffaloPackingMilkRate.value
                 }
             } else {
                 //Amount calculation of buffalo milk rate - (NORMAL MILK)
                 if let rate = data["NormalMilkRate"]{
                     totalAmount = convertValueToDouble(rate) * convertValueToDouble(TotalBuffaloMilk)
                 } else {
-                    totalAmount = convertValueToDouble(TotalBuffaloMilk) * 62
+                    totalAmount = convertValueToDouble(TotalBuffaloMilk) * MilkRates.NormalMilkRate.value
                 }
             }
         }
@@ -49,7 +48,7 @@ class BillManager : NSObject {
             if let rate = data["NormalMilkRate"] as? String {
                 totalAmount = convertValueToDouble(rate) * convertValueToDouble(TotalCowMilk)
             } else {
-                totalAmount = convertValueToDouble(TotalCowMilk) * 62
+                totalAmount = convertValueToDouble(TotalCowMilk) * MilkRates.NormalMilkRate.value
             }
         }
         return totalAmount

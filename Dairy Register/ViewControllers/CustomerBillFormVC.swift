@@ -114,10 +114,10 @@ class CustomerBillFormVC: UIViewController {
     
     
     func isPackingMilk() -> String {
-        if (selectBuffaloRate == "66") {
-            return "Yes"
+        if (selectBuffaloRate == MilkRatesInString.BuffaloPackingMilkRate.value) {
+            return kYes
         }
-        return "No"
+        return kNo
     }
     
     
@@ -197,7 +197,7 @@ class CustomerBillFormVC: UIViewController {
         btnBuffaloRate62?.backgroundColor = tag == 0 ? UIColor.white : UIColor.systemGreen
         btnBuffaloRate66?.setTitleColor(tag == 0 ? UIColor.white : UIColor.systemGreen, for: .normal)
         btnBuffaloRate62?.setTitleColor(tag == 0 ? UIColor.systemGreen : UIColor.white, for: .normal)
-        selectBuffaloRate = tag == 0 ? "66" : "62"
+        selectBuffaloRate = tag == 0 ? MilkRatesInString.BuffaloPackingMilkRate.value : MilkRatesInString.NormalMilkRate.value
     }
     
     func rateSelectForCowMilk(tag : Int) {
@@ -205,7 +205,7 @@ class CustomerBillFormVC: UIViewController {
         btnCowRate62?.backgroundColor = tag == 0 ? UIColor.white : UIColor.systemGreen
         btnCowRate66?.setTitleColor(tag == 0 ? UIColor.white : UIColor.systemGreen, for: .normal)
         btnCowRate62?.setTitleColor(tag == 0 ? UIColor.systemGreen : UIColor.white, for: .normal)
-        selectCowRate = tag == 0 ? "66" : "62"
+        selectCowRate = MilkRatesInString.NormalMilkRate.value
     }
 }
 

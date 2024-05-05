@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 enum FontFamilyAndSize {
+    case BoldSize8
     case BoldSize10
     case BoldSize12
     case BoldSize14
@@ -17,6 +18,7 @@ enum FontFamilyAndSize {
     case BoldSize18
     case BoldSize20
     case BoldSize24
+    case RegularSize8
     case RegularSize10
     case RegularSize12
     case RegularSize14
@@ -26,8 +28,8 @@ enum FontFamilyAndSize {
     case RegularSize24
 }
 
-let kYes = "Yes"
-let kNo = "No"
+let kYes = "1"
+let kNo = "0"
 
 
 enum MonthEnum : Int {
@@ -64,6 +66,13 @@ enum BillConstants: String {
     case AdvanceAmount = "पूर्व भुगतान (Advance) (-)"
     case finalPayableAmount = "भुगतान राशि"
     case Note = "नोट :-"
+    case milkRateNote66 = "1) 01/05/2024 से दूध का रेट ₹66 प्रति लीटर"
+    case milkRateNote70 = "1) 01/05/2024 से दूध का रेट ₹70 प्रति लीटर"
+    case milkRateNoteFor70 = "***  01/05/2024 से दूध का रेट  *** \n(भैंस): ₹70 प्रति ली  |  (गाय): ₹66 प्रति ली"
+    case milkRateNoteFor66 = "***  01/05/2024 से दूध का रेट  *** \n₹66 प्रति ली"
+   
+//    case milkRateNoteFor70 = "   ***  01/05/2024 से दूध का रेट  *** \n(भैंस): ₹70 प्रति ली  |  (गाय): ₹66 प्रति ली"
+//    case milkRateNoteFor66 = "   ***  01/05/2024 से दूध का रेट  *** \n                     ₹66 प्रति ली"
     case NotePoint2 = "2) उधार दूध लेने की स्थिति में 7 तारीख तक भुगतान करना अनिवार्य है ।"
     case NotePoint1 = "1) दूध डिलीवरी बॉय को भुगतान(रुपये) देते समय हमें फोन द्वारा सूचित करें अन्यथा आपकी जिम्मेदारी होगी ।"
     case MobileNumber1 = "9897303731"
@@ -108,6 +117,23 @@ enum CustomerDataKeys : String {
     case isPackingMilk = "isPackingMilk"
     case FinalAmt = "Final Amt"
     
+    var value : String {
+        return self.rawValue
+    }
+}
+
+enum MilkRates  : Double {
+    case NormalMilkRate =  66
+    case BuffaloPackingMilkRate = 70
+    var value : Double {
+        return self.rawValue
+    }
+}
+
+
+enum MilkRatesInString  : String {
+    case NormalMilkRate =  "66"
+    case BuffaloPackingMilkRate = "70"
     var value : String {
         return self.rawValue
     }

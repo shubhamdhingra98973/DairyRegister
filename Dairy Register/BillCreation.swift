@@ -147,14 +147,21 @@ class BillCreation : NSObject {
             yCordinate =  yCordinate.setTopMargin(value: isIPadDevice ? 30 : 20)
             addDashedLine(context:  context.cgContext, yCordinate: yCordinate)
             yCordinate =  yCordinate.setTopMargin(value: 10)
-            
-            
+//            
+//            let rateContent = BillManager.shared.getBuffaloMilkRate(data: data) == 66 ? BillConstants.milkRateNoteFor70.value :  BillConstants.milkRateNoteFor66.value
+//            
+//           addTextInCenter(context:  context.cgContext, font:  isIPadDevice ? .BoldSize14 : .BoldSize10, text: rateContent, yCordinate: yCordinate , alignment: .center , marginFromLeft: 0 , marginFromRight: 0)
+//            yCordinate =  yCordinate.setTopMargin(value: isIPadDevice ? 42 : 32)
+//            addDashedLine(context:  context.cgContext, yCordinate: yCordinate)
+//            yCordinate =  yCordinate.setTopMargin(value: 10)
             
             /****          NOTE  POINTS        ******/
             
             addTextInCenter(context:  context.cgContext, font: isIPadDevice ? .BoldSize14 : .BoldSize10, text: BillConstants.Note.value, yCordinate: yCordinate , alignment: .left , marginFromLeft: PaperDimensions.marginFromBothSides.value)
             yCordinate =  yCordinate.setTopMargin(value: 16)
+            
             let finalNoteContent =  "\(BillConstants.NotePoint1.value)"
+           
             addTextInCenter(context:  context.cgContext, font:  isIPadDevice ? .RegularSize14 : .RegularSize10, text: finalNoteContent, yCordinate: yCordinate , alignment: .left , marginFromLeft: PaperDimensions.marginFromBothSides.value, marginFromRight: PaperDimensions.marginFromBothSides.value)
             let lineTakenByContent = Utility.shared.noOfLinesTakenByContent(text: finalNoteContent, font: .BoldSize12, contentArea: CGSize(width:paperWidth, height: paperHeight))
             let yMarginSpacing : CGFloat = isIPadDevice ? 12 : 10

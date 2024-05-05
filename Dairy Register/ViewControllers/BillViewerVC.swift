@@ -16,10 +16,12 @@ class BillViewerVC: UIViewController {
     @IBOutlet weak var bgView : UIView?
     @IBOutlet weak var printerInfo : UILabel!
     
+    
     var imageParam : UIImage?
     var customerRecord = [String : Any]()
     var test:WifiManager!
     var isConnectedGlobal:Bool=false
+    var isDairySlip : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

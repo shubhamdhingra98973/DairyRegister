@@ -50,6 +50,8 @@ class Utility : NSObject {
     func getFont(fontInfo : FontFamilyAndSize) -> UIFont {
        
         switch fontInfo {
+        case .BoldSize8:
+            return UIFont.boldSystemFont(ofSize: 8)
         case .BoldSize10:
             return UIFont.boldSystemFont(ofSize: 10)
         case .BoldSize12:
@@ -64,6 +66,8 @@ class Utility : NSObject {
             return UIFont.boldSystemFont(ofSize: 20)
         case .BoldSize24:
             return UIFont.boldSystemFont(ofSize: 24)
+        case .RegularSize8:
+            return UIFont.systemFont(ofSize: 8)
         case .RegularSize10:
             return UIFont.systemFont(ofSize: 10)
         case .RegularSize12:
