@@ -1,4 +1,5 @@
 {
+  "originHash" : "3ff0720c4a4d908f9b93d9d96bad75decc99936ece98a60cf83cc6cfbb61b9da",
   "pins" : [
     {
       "identity" : "corexlsx",
@@ -23,10 +24,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/weichsel/ZIPFoundation.git",
       "state" : {
-        "revision" : "43ec568034b3731101dbf7670765d671c30f54f3",
-        "version" : "0.9.16"
+        "revision" : "02b6abe5f6eef7e3cbd5f247c5cc24e246efcfe0",
+        "version" : "0.9.19"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
