@@ -15,7 +15,6 @@
 		695958F52A9FB24C00D0E87B /* CustomerBillFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F42A9FB24C00D0E87B /* CustomerBillFormVC.swift */; };
 		695958F82A9FCFFC00D0E87B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F72A9FCFFC00D0E87B /* Toast.swift */; };
 		695958FA2AA05D5400D0E87B /* UDKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695958F92AA05D5400D0E87B /* UDKeys.swift */; };
-		698533C12BE100580011115C /* Customer_Milk_Record_sheet.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */; };
 		69AE05252A96731E00576369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE05242A96731E00576369 /* AppDelegate.swift */; };
 		69AE05272A96731E00576369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE05262A96731E00576369 /* SceneDelegate.swift */; };
 		69AE052C2A96731E00576369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE052A2A96731E00576369 /* Main.storyboard */; };
@@ -42,6 +41,7 @@
 		69AE05772A9677E700576369 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AE05762A9677E700576369 /* CoreBluetooth.framework */; };
 		69AE057C2A96784100576369 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AE05792A96784100576369 /* AsyncSocket.m */; };
 		69AE057D2A96784100576369 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AE057A2A96784100576369 /* AsyncUdpSocket.m */; };
+		69BA86AB2C5A4025003F0FEB /* Customer_Milk_Record_sheet.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 69BA86AA2C5A4025003F0FEB /* Customer_Milk_Record_sheet.xlsx */; };
 		69C04A1E2A9B09D9007ABA66 /* MainPrinterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A1D2A9B09D9007ABA66 /* MainPrinterVC.swift */; };
 		69C04A202A9B09F5007ABA66 /* CustomerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A1F2A9B09F5007ABA66 /* CustomerListVC.swift */; };
 		69C04A272A9B32CE007ABA66 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C04A252A9B32CE007ABA66 /* CustomerCell.swift */; };
@@ -66,7 +66,6 @@
 		695958F42A9FB24C00D0E87B /* CustomerBillFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerBillFormVC.swift; sourceTree = "<group>"; };
 		695958F72A9FCFFC00D0E87B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		695958F92AA05D5400D0E87B /* UDKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDKeys.swift; sourceTree = "<group>"; };
-		698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Customer_Milk_Record_sheet.xlsx; sourceTree = "<group>"; };
 		69AE05212A96731D00576369 /* Dairy Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dairy Register.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AE05242A96731E00576369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AE05262A96731E00576369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		69AE05792A96784100576369 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		69AE057A2A96784100576369 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		69AE057B2A96784100576369 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		69BA86AA2C5A4025003F0FEB /* Customer_Milk_Record_sheet.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Customer_Milk_Record_sheet.xlsx; sourceTree = "<group>"; };
 		69C04A1D2A9B09D9007ABA66 /* MainPrinterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPrinterVC.swift; sourceTree = "<group>"; };
 		69C04A1F2A9B09F5007ABA66 /* CustomerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListVC.swift; sourceTree = "<group>"; };
 		69C04A252A9B32CE007ABA66 /* CustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		69AE05232A96731D00576369 /* Dairy Register */ = {
 			isa = PBXGroup;
 			children = (
+				69BA86AA2C5A4025003F0FEB /* Customer_Milk_Record_sheet.xlsx */,
 				695440732BE63495003A7EF9 /* DairySlipFiles */,
-				698533C02BE100580011115C /* Customer_Milk_Record_sheet.xlsx */,
 				695958F62A9FCFFC00D0E87B /* Toast */,
 				69C04A2C2A9B4496007ABA66 /* Utils */,
 				69C04A292A9B3391007ABA66 /* CustomDataSource */,
@@ -393,7 +393,7 @@
 			files = (
 				69AE05312A96731E00576369 /* LaunchScreen.storyboard in Resources */,
 				69AE052E2A96731E00576369 /* Assets.xcassets in Resources */,
-				698533C12BE100580011115C /* Customer_Milk_Record_sheet.xlsx in Resources */,
+				69BA86AB2C5A4025003F0FEB /* Customer_Milk_Record_sheet.xlsx in Resources */,
 				69AE05622A96749F00576369 /* Documentation.html in Resources */,
 				69AE052C2A96731E00576369 /* Main.storyboard in Resources */,
 				69C04A282A9B32CE007ABA66 /* CustomerCell.xib in Resources */,
